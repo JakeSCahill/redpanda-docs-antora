@@ -5,6 +5,7 @@
   "license": "ISC",
   "scripts": {
     "build": "antora --to-dir poc-docs --fetch antora-playbook.yml",
+    "build-local": "antora --to-dir poc-docs --fetch local-playbook.yml",
     "serve": "serve poc-docs",
     "expose": "ngrok http 5000"
   },
