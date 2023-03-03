@@ -3,8 +3,8 @@ site:
   start_page: redpanda:get-started:intro-to-events.adoc
 content:
   sources:
-  - url: ./antora-docs
-    branches: HEAD
+  - url: https://github.com/JakeSCahill/redpanda-docs-antora
+    branches: [main, v/*]
 ui:
   bundle:
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable

@@ -1,4 +1,4 @@
-node_modules
+node_modules/
 .docusaurus
 build/*
 !build/_redirects
