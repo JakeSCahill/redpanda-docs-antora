@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>How Redpanda Works :: Redpanda Docs</title>
+    <meta name="description" content="Overview of Redpanda architecture.">
+    <meta name="generator" content="Antora 3.1.2">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Redpanda Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="redpanda" data-version="23.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Redpanda</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="intro-to-events.html">Get Started</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="architecture.html">How Redpanda Works</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="code-examples.html">Kafka Client Code Examples</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Redpanda</span>
+    <span class="version">23.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Redpanda</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">23.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="intro-to-events.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Redpanda</a></li>
+    <li><a href="intro-to-events.html">Get Started</a></li>
+    <li><a href="architecture.html">How Redpanda Works</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/jakecahill/Documents/redpanda-docs-antora/antora-docs/modules/get-started/pages/architecture.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">How Redpanda Works</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>At its core, Redpanda is a fault-tolerant transaction log for storing event streams. Producers and consumers interact with Redpanda using the Kafka API. To achieve high scalability, producers and consumers are fully decoupled. Redpanda provides strong guarantees to producers that events are stored durably within the system, and consumers can subscribe to Redpanda and read the events asynchronously.</p>
+</div>
+<div class="paragraph">
+<p>Redpanda achieves this decoupling by organizing events into topics. Topics represent a logical grouping of events that are written to the same log. A topic can have multiple producers writing events to it and multiple consumers reading events from it.</p>
+</div>
+<div class="paragraph">
+<p>This page provides details about how Redpanda works. For a high-level overview, see <a href="intro-to-events.html" class="xref page">Introduction to Redpanda</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tiered_storage"><a class="anchor" href="#_tiered_storage"></a>Tiered Storage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Redpanda <a href="../../manage/tiered-storage">Tiered Storage</a> is a multi-tiered remote storage solution that provides the ability to offload log segments to cloud storage in near real time. Tiered Storage can be combined with local storage to provide long-term data retention and disaster recovery on a per-topic basis.</p>
+</div>
+<div class="paragraph">
+<p>Consumers that read from more recent offsets continue to read from local storage, and consumers that read from historical offsets read from object storage, all with the same API. Consumers can read and reread events from any point within the maximum retention period, whether the events reside on local or remote storage.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_partitions"><a class="anchor" href="#_partitions"></a>Partitions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To scale topics, Redpanda shards them into one or more partitions that are distributed across the nodes in a cluster. This allows for concurrent writing and reading from multiple nodes. When producers write to a topic, they route events to one of the topic&#8217;s partitions. Events with the same key (like a stock ticker) are always routed to the same partition, and Redpanda guarantees the order of events at the partition level. Consumers read events from a partition in the order that they were written. If a key is not specified, then events are sent to all topic-partitions in a round-robin fashion.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_raft_consensus_algorithm"><a class="anchor" href="#_raft_consensus_algorithm"></a>Raft consensus algorithm</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Redpanda provides strong guarantees for data safety and fault tolerance. Events written to a topic-partition are appended to a log file on disk. They can be replicated to other nodes in the cluster and appended to their copies of the log file on disk to prevent data loss in the event of failure. The <a href="https://raft.github.io/">Raft consensus algorithm</a> is used for data replication.</p>
+</div>
+<div class="paragraph">
+<p>Every topic-partition forms a Raft group consisting of a single elected leader and zero or more followers (as specified by the topic&#8217;s replication factor). A Raft group can tolerate ƒ failures given 2ƒ+1 nodes. For example, in a cluster with five nodes and a topic with a replication factor of five, the topic remains fully operational if two nodes fail.</p>
+</div>
+<div class="paragraph">
+<p>Raft is a majority vote algorithm. For a leader to acknowledge that an event has been committed to a partition, a majority of its replicas must have written that event to their copy of the log. When a majority (quorum) of responses have been received, the leader can make the event available to consumers and acknowledge receipt of the event when <code>acks=all (-1)</code>. <a href="../../develop/produce-data/configure-producers/#producer-acknowledgement-settings">Producer acknowledgement settings</a> define how producers and leaders communicate their status while transferring data.</p>
+</div>
+<div class="paragraph">
+<p>As long as the leader and a majority of the replicas are stable, Redpanda can tolerate disturbances in a minority of the replicas. If <a href="https://blog.acolyer.org/2017/06/15/gray-failure-the-achilles-heel-of-cloud-scale-systems/">gray failures</a> cause a minority of replicas to respond slower than normal, then the leader does not have to wait for their responses to progress, and any additional latency is not passed on to the clients. The result is that Redpanda is less sensitive to faults and can deliver predictable performance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_partition_leadership_elections"><a class="anchor" href="#_partition_leadership_elections"></a>Partition leadership elections</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://raft.github.io/">Raft</a> uses a heartbeat mechanism to maintain leader authority and to trigger leader elections. The partition leader sends a periodic heartbeat to all followers to assert its leadership in the current term (default = 150 milliseconds). A term is an arbitrary period of time that starts when a leader election is triggered. If a follower does not receive a heartbeat over a period of time (default = 1.5 seconds), then it triggers an election to choose a new partition leader. The follower increments its term and votes for itself to be the leader for that term. It then sends a vote request to the other nodes and waits for one of the following scenarios:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>It receives a majority of votes and becomes the leader. Raft guarantees that at most one candidate can be elected the leader for a given term.</p>
+</li>
+<li>
+<p>Another follower establishes itself as the leader. While waiting for votes, the candidate may receive communication from another node in the group claiming to be the leader. The candidate only accepts the claim if its term is greater than or equal to the candidate&#8217;s term; otherwise, the communication is rejected and the candidate continues to wait for votes.</p>
+</li>
+<li>
+<p>No leader is elected over a period of time. If multiple followers timeout and become election candidates at the same time, it&#8217;s possible that no candidate gets a majority of votes. When this happens, each candidate increments its term and triggers a new election round. Raft uses a random timeout between 150-300 milliseconds to ensure that split votes are rare and resolved quickly.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As long as there is a timing inequality between heartbeat time, election timeout, and mean time between node failures (MTBF), then Raft can elect and maintain a steady leader and make progress. A leader can maintain its position as long as one of the ten heartbeat messages it sends to all of its followers every 1.5 seconds is received; otherwise, a new leader is elected.</p>
+</div>
+<div class="paragraph">
+<p>If a follower triggers an election, but the incumbent leader subsequently springs back to life and starts sending data again, then it&#8217;s too late. As part of the election process, the follower (now an election candidate) incremented the term and rejects requests from the previous term, essentially forcing a leadership change. If a cluster is experiencing wider network infrastructure problems that result in latencies above the heartbeat timeout, then back-to-back election rounds can be triggered. During this period, unstable Raft groups may not be able to form a quorum. This results in partitions rejecting writes, but no data loss can occur. Redpanda has a Raft-priority implementation that allows the system to settle quickly after network outages.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_optimized_platform_performance"><a class="anchor" href="#_optimized_platform_performance"></a>Optimized platform performance</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Redpanda is designed to exploit advances in modern hardware, from the network down to the disks. Network bandwidth has increased considerably, especially in the cloud, and spinning disks have been replaced by SSD devices that deliver better I/O performance. CPUs are faster too, but this is largely due to the increased core counts as opposed to the increase in single-core speeds. Redpanda has tuners that detect your hardware configuration to automatically optimize itself.</p>
+</div>
+<div class="paragraph">
+<p>Examples of platform and kernel features that Redpanda uses to optimize its performance:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Direct Memory Access (DMA) for disk I/O</p>
+</li>
+<li>
+<p>Sparse file system support with XFS</p>
+</li>
+<li>
+<p>Distribution of interrupt request (IRQ) processing between CPU cores</p>
+</li>
+<li>
+<p>Isolated processes with control groups (cgroups)</p>
+</li>
+<li>
+<p>Disabled CPU power-saving modes</p>
+</li>
+<li>
+<p>Upfront memory allocation, partitioned and pinned to CPU cores</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_thread_per_core_model"><a class="anchor" href="#_thread_per_core_model"></a>Thread-per-core model</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Redpanda implements a thread-per-core programming model through its use of the <a href="https://seastar.io/">Seastar</a> library. This allows Redpanda to pin each of its application threads to a CPU core to avoid context switching and blocking. It combines this with structured message passing (SMP) to asynchronously communicate between the pinned threads. With this, Redpanda avoids the overhead of context switching and expensive locking operations to improve processing performance and efficiency.</p>
+</div>
+<div class="paragraph">
+<p>From a sizing perspective, Redpanda&#8217;s ability to efficiently use all available hardware enables it to scale up to get the most out of your infrastructure, before you&#8217;re forced to scale out to meet the demands of your workload. Redpanda delivers better performance with a smaller footprint, resulting in reduced operational costs and complexity.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_next_steps"><a class="anchor" href="#_next_steps"></a>Next steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="quick-start">Try out Redpanda</a>, or learn about <a href="licenses.adoc">Redpanda Licensing</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_suggested_reading"><a class="anchor" href="#_suggested_reading"></a>Suggested reading</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://redpanda.com/blog/tpc-buffers?utm_medium=content&amp;utm_assetname=sizing_guide&amp;utm_assettype=report&amp;utm_source=gated_content&amp;utm_campaign=tpc_architecture_blog">Thread-per-core buffer management for a modern Kafka-API storage system</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../_/js/vendor/tabs.js"></script>
+  </body>
+</html>

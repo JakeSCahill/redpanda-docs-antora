@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Introduction to Redpanda :: Redpanda Docs</title>
+    <meta name="description" content="Explanation of Redpanda event streaming.">
+    <meta name="generator" content="Antora 3.1.2">
+<link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Redpanda Docs</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="redpanda" data-version="23.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Redpanda</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="intro-to-events.html">Get Started</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="architecture.html">How Redpanda Works</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="code-examples.html">Kafka Client Code Examples</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Redpanda</span>
+    <span class="version">23.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Redpanda</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">23.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="intro-to-events.html" class="home-link is-current"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Redpanda</a></li>
+    <li><a href="intro-to-events.html">Get Started</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="file:///Users/jakecahill/Documents/redpanda-docs-antora/antora-docs/modules/get-started/pages/intro-to-events.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Introduction to Redpanda</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Distributed systems often require data and system updates to happen as quickly as possible. In software architecture, these updates can be handled with either messages or events.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>With messages, updates are sent directly from one component to another to trigger an action.</p>
+</li>
+<li>
+<p>With events, updates indicate that an action occurred at a specific time, and are not directed to a specific recipient.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>An event is simply a record of something changing state. For example, the event of a credit card transaction includes the product purchased, the payment, the delivery, and the time of the purchase. The event occurred in the purchasing component, but it also impacts the inventory, the payment processing, and the shipping components.</p>
+</div>
+<div class="paragraph">
+<p>In event-driven architecture, all actions are defined and packaged as events to precisely identify individual actions and how they&#8217;re processed throughout the system. Instead of processing updates in consecutive order, event-driven architecture lets components process events at their own pace. This helps developers build fast and scalable systems.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_is_redpanda"><a class="anchor" href="#_what_is_redpanda"></a>What is Redpanda?</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Redpanda is an event streaming platform: it provides the infrastructure for streaming real-time data.</p>
+</div>
+<div class="paragraph">
+<p>Producers are client applications that send data to Redpanda in the form of events. Redpanda safely stores these events in sequence and organizes them into topics, which represent a replayable log of changes in the system.</p>
+</div>
+<div class="paragraph">
+<p>Consumers are client applications that subscribe to Redpanda topics to asynchronously read events. Consumers can store, process, or react to the events.</p>
+</div>
+<div class="paragraph">
+<p>Redpanda decouples producers from consumers to allow for asynchronous event processing, event tracking, event manipulation, and event archiving. Producers and consumers interact with Redpanda using the Apache Kafka® API.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/cluster.png" alt="Producers and consumers in a cluster">
+</div>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Event-driven architecture (Redpanda)</th>
+<th class="tableblock halign-left valign-top">Message-driven architecture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Producers send events to an event processing system (Redpanda) that acknowledges receipt of the write. This guarantees that the write is durable within the system and can be read by multiple consumers.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Producers send messages directly to each consumer. The producer must wait for acknowledgement that the consumer received the message before it can continue with its processes.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Event streaming lets you extract value out of each event by analyzing, mining, or transforming it for insights. You can:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Take one event and consume it in multiple ways.</p>
+</li>
+<li>
+<p>Replay events from the past and route them to new processes in your application.</p>
+</li>
+<li>
+<p>Run transformations on the data in real-time or historically.</p>
+</li>
+<li>
+<p>Integrate with other event processing systems that use the Kafka API.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_redpanda_differentiators"><a class="anchor" href="#_redpanda_differentiators"></a>Redpanda differentiators</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Redpanda is less complex and less costly than any other commercial mission-critical event streaming platform. It&#8217;s fast, it&#8217;s easy, and it keeps your data safe.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Redpanda is designed for maximum performance on any data streaming workload.</p>
+<div class="paragraph">
+<p>It can scale up to use all available resources on a single machine and scale out to distribute performance across multiple nodes. Built on C&#43;&#43;, Redpanda delivers greater throughput and up to 10x lower p99 latencies than other platforms. This enables previously-unimaginable use cases that require high throughput, low latency, and a minimal hardware footprint.</p>
+</div>
+</li>
+<li>
+<p>Redpanda is packaged as a single binary: it doesn&#8217;t rely on any external systems.</p>
+<div class="paragraph">
+<p>It&#8217;s compatible with the Kafka API, so it works with the full ecosystem of tools and integrations built on Kafka. Redpanda can be deployed on bare metal, containers, or virtual machines in a data center or in the cloud. And Redpanda Console makes it easy to set up, manage, and monitor your clusters. Additionally, Tiered Storage lets you offload log segments to cloud storage in near real time, providing long-term data retention and topic recovery.</p>
+</div>
+</li>
+<li>
+<p>Redpanda uses the <a href="https://raft.github.io/">Raft consensus algorithm</a> throughout the platform to coordinate writing data to log files and replicating that data across multiple servers.</p>
+<div class="paragraph">
+<p>Raft facilitates communication between the nodes in a Redpanda cluster to make sure that they agree on changes and remain in sync, even if a minority of them are in a failure state. This allows Redpanda to tolerate partial environmental failures and deliver predictable performance, even at high loads.</p>
+</div>
+</li>
+<li>
+<p>Redpanda provides data sovereignty.</p>
+<div class="paragraph">
+<p>With the <a href="../../deploy/deployment-option/cloud/dedicated-byoc">Bring Your Own Cloud</a> (BYOC) offering, you deploy Redpanda in your own virtual private cloud, and all data is contained in your environment. Redpanda handles provisioning, monitoring, and upgrades, but you manage your streaming data without Redpanda&#8217;s control plane ever seeing it.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_next_steps"><a class="anchor" href="#_next_steps"></a>Next steps</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Learn more details about <a href="architecture.html" class="xref page">How Redpanda Works</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_suggested_links"><a class="anchor" href="#_suggested_links"></a>Suggested links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.youtube.com/watch?v=FEVL8cLUFOc">CEO Alex Gallego keynote</a></p>
+</li>
+<li>
+<p><a href="https://redpanda.com/blog/redpanda-vs-kafka-total-cost-ownership-comparison">Redpanda vs Apache Kafka: A Total Cost of Ownership comparison</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../_/js/vendor/tabs.js"></script>
+  </body>
+</html>
