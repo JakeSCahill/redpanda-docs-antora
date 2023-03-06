@@ -3,31 +3,12 @@ site:
   start_page: redpanda:get-started:intro-to-events.adoc
 content:
   sources:
-  - url: .
-    branches: HEAD
   - url: https://github.com/JakeSCahill/redpanda-docs-antora
-    branches: v/*
+    branches: [main, v/*]
 ui:
   bundle:
     url: https://github.com/JakeSCahill/redpanda-docs-ui/releases/latest/download/ui-bundle.zip
     snapshot: true
-  supplemental_files:
-  - path: css/vendor/tabs.css
-    contents: ./node_modules/@asciidoctor/tabs/dist/css/tabs.css
-  - path: js/vendor/tabs.js
-    contents: ./node_modules/@asciidoctor/tabs/dist/js/tabs.js
-  - path: partials/footer-scripts.hbs
-    contents: |
-      <script id="site-script" src="{{{uiRootPath}}}/js/site.js" data-ui-root-path="{{{uiRootPath}}}"></script>
-      <script async src="{{{uiRootPath}}}/js/vendor/highlight.js"></script>
-      <script async src="{{{uiRootPath}}}/js/vendor/tabs.js"></script>
-      {{#if env.SITE_SEARCH_PROVIDER}}
-      {{> search-scripts}}
-      {{/if}}
-  - path: partials/head-styles.hbs
-    contents: |
-      <link rel="stylesheet" href="{{{uiRootPath}}}/css/site.css">
-      <link rel="stylesheet" href="{{{uiRootPath}}}/css/vendor/tabs.css">
 asciidoc:
   attributes:
     tabs-sync-option: true
