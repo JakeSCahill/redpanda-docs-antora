@@ -6,4 +6,4 @@ build/*
 build/_redirects
 .idea
 .vscode
-local-docs/
+docs/
