@@ -4,9 +4,8 @@
   "description": "Redpanda documentation",
   "license": "ISC",
   "scripts": {
-    "build": "antora --to-dir poc-docs --fetch antora-playbook.yml",
-    "serve": "serve poc-docs",
-    "expose": "ngrok http 5000"
+    "build": "antora --to-dir local-docs --fetch antora-playbook.yml",
+    "serve": "ws -d local-docs"
   },
   "devDependencies": {
     "@antora/cli": "3.1.2",
@@ -14,6 +13,6 @@
   },
   "dependencies": {
     "@asciidoctor/tabs": "^1.0.0-beta.3",
-    "serve": "^14.2.0"
+    "local-web-server": "^5.3.0"
   }
 }
