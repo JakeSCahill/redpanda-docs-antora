@@ -4,7 +4,7 @@ site:
 content:
   sources:
   - url: https://github.com/JakeSCahill/redpanda-docs-antora
-    branches: [main, v/*]
+    branches: [v*]
 ui:
   bundle:
     url: https://github.com/JakeSCahill/redpanda-docs-ui/releases/latest/download/ui-bundle.zip
