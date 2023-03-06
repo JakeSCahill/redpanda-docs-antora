@@ -1,5 +1,6 @@
 site:
   title: Redpanda Docs
+  url: http://localhost:3000
   start_page: redpanda:get-started:intro-to-events.adoc
 content:
   sources:
@@ -9,7 +10,7 @@ content:
     branches: v/*
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    url: https://github.com/JakeSCahill/redpanda-docs-ui/releases/latest/download/ui-bundle.zip
     snapshot: true
   supplemental_files:
   - path: css/vendor/tabs.css
