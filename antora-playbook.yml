@@ -3,6 +3,8 @@ site:
   start_page: redpanda:get-started:intro-to-events.adoc
 content:
   sources:
+  - url: .
+    branches: HEAD
   - url: https://github.com/JakeSCahill/redpanda-docs-antora
     branches: [v*]
 ui:

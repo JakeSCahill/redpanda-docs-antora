@@ -4,7 +4,7 @@
   "description": "Redpanda documentation",
   "license": "ISC",
   "scripts": {
-    "build": "antora --to-dir docs --fetch antora-playbook.yml",
+    "build": "export ALGOLIA_API_KEY=2639b1b6c05670f52200b301c84866d9 && export ALGOLIA_APP_ID=6YUV7845VT && export ALGOLIA_INDEX_NAME=redpanda && antora --to-dir docs --fetch antora-playbook.yml",
     "serve": "ws -d docs"
   },
   "devDependencies": {
