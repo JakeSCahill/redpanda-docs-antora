@@ -5,11 +5,12 @@ content:
   sources:
   - url: .
     branches: HEAD
+    start_paths: site-root, home
   - url: https://github.com/JakeSCahill/redpanda-docs-antora
     branches: [v*]
 ui:
   bundle:
-    url: https://github.com/JakeSCahill/redpanda-docs-ui/releases/latest/download/ui-bundle.zip
+    url: ../redpanda-docs-ui/build/ui-bundle.zip
     snapshot: true
 asciidoc:
   attributes:
