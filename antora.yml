@@ -1,5 +1,9 @@
 name: redpanda
 title: Redpanda
 version: 23.1
+asciidoc:
+  attributes:
+    full-version: 23.1.1@
+    latest-release-commit: 6002d4d@
 nav:
 - modules/get-started/nav.adoc
