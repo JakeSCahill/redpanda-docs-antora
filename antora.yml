@@ -1,6 +1,7 @@
 name: redpanda
 title: Redpanda
 version: 23.1
+start_page: get-started:intro-to-events.adoc
 asciidoc:
   attributes:
     full-version: 23.1.1@
