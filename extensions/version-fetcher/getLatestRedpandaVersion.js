@@ -15,7 +15,7 @@ if (!process.env.GITHUB_TOKEN) return
 var latestRedpandaReleaseVersion;
 var latestRedpandaReleaseCommitHash;
 
-async function getVersions() {
+module.exports = async () => {
   await github.rest.repos.getLatestRelease({
     owner,
     repo,
@@ -37,7 +37,5 @@ async function getVersions() {
   }).catch((error => {
     return
   }))
-  console.log(`${latestRedpandaReleaseVersion} ${latestRedpandaReleaseCommitHash}`)
+  return [latestRedpandaReleaseVersion, latestRedpandaReleaseCommitHash]
 };
-
-return getVersions()

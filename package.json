@@ -4,8 +4,7 @@
   "description": "Redpanda documentation",
   "license": "ISC",
   "scripts": {
-    "build-prod": "./scripts/build-prod.sh",
-    "build": "antora --to-dir docs --fetch antora-playbook.yml",
+    "build": "./start-scripts/build.sh",
     "serve": "ws -d docs"
   },
   "devDependencies": {

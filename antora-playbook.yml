@@ -19,4 +19,4 @@ asciidoc:
   - '@asciidoctor/tabs'
 antora:
   extensions:
-  - ./extensions/set-latest-version.js
+  - ./extensions/version-fetcher/set-latest-version.js
