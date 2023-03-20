@@ -12,5 +12,6 @@ ui:
 asciidoc:
   attributes:
     tabs-sync-option: true
+    latest-console-version: 2.2.2@
   extensions:
   - '@asciidoctor/tabs'
