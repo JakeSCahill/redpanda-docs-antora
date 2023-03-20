@@ -10,6 +10,52 @@ This example walks you through how to get started with a variety of Kafka
 client libraries by creating a topic, producing some data, and consuming it
 back.
 
+
+[,yaml]
+----
+include::example$docker-compose.yml[]
+----
+
+////
+[,yaml,subs="attributes+"]
+----
+include::example$docker-compose.yml[]
+----
+////
+
+////
+[,yaml,subs="attributes+"]
+----
+include::example$docker-compose.yml[tags=ports]
+----
+////
+
+////
+[,yaml,subs="attributes+"]
+----
+include::example$docker-compose.yml[tag=**]
+----
+////
+
+////
+<details>
+<summary>
+</summary>
+</details>
+
+[%collapsible]
+====
+[,yaml]
+----
+include::example$docker-compose.yml[]
+----
+====
+////
+
+////
+callouts <1>
+////
+
 == Set up Redpanda
 
 Follow the link:quick-start.adoc[] guide to spin up a development

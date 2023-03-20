@@ -13,9 +13,13 @@ An event is simply a record of something changing state. For example, the event 
 
 In event-driven architecture, all actions are defined and packaged as events to precisely identify individual actions and how they're processed throughout the system. Instead of processing updates in consecutive order, event-driven architecture lets components process events at their own pace. This helps developers build fast and scalable systems.
 
+include::partial$example.adoc[]
+
 == What is Redpanda?
 
 Redpanda is an event streaming platform: it provides the infrastructure for streaming real-time data.
+
+include::partial$example.adoc[leveloffset=+1]
 
 Producers are client applications that send data to Redpanda in the form of events. Redpanda safely stores these events in sequence and organizes them into topics, which represent a replayable log of changes in the system.
 
