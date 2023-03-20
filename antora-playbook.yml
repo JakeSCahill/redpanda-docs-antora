@@ -17,3 +17,6 @@ asciidoc:
     tabs-sync-option: true
   extensions:
   - '@asciidoctor/tabs'
+antora:
+  extensions:
+  - ./extensions/set-latest-version.js
