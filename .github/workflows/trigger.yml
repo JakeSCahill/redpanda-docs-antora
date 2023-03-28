@@ -27,6 +27,12 @@ jobs:
       - name: Generate Helm Docs
         run: |
           helm-docs
+          
+      - name: Checkout redpanda-docs-antora
+        uses: actions/checkout@v2
+        with:
+          repository: JakeSCahill/redpanda-docs-antora
+          ref: dev
 
       - name: Copy Helm Docs output to redpanda-docs-antora
         run: |
