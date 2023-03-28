@@ -10,18 +10,13 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Homebrew
+      - name: Download helm-docs
         run: |
-          sudo apt install build-essential
-          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+          curl -sL https://github.com/norwoodj/helm-docs/releases/download/v1.11.0/helm-docs_1.11.0_Linux_arm64.tar.gz | tar xz
           
-      - name: Add Homebrew to $PATH
+      - name: Add helm-docs to $PATH
         run: |
-          echo "$GITHUB_WORKSPACE/home/linuxbrew/.linuxbrew/bin/brew" >> $GITHUB_PATH
-
-      - name: Install Helm Docs
-        run: |
-          brew install norwoodj/tap/helm-docs
+          echo "$GITHUB_WORKSPACE/helm-docs" >> $GITHUB_PATH
 
       - name: Checkout helm-charts repository
         uses: actions/checkout@v2
