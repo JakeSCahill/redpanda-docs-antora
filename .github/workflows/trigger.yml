@@ -27,12 +27,11 @@ jobs:
       - name: Generate Helm Docs
         run: |
           helm-docs
-          ls
 
       - name: Copy Helm Docs output to redpanda-docs-antora
         run: |
-          cp charts/redpanda/README.md redpanda-docs-antora/docs/reference/
           ls
+          cp charts/redpanda/README.md redpanda-docs-antora/docs/reference/
         working-directory: ${{ github.workspace }}
         
       - name: Commit changes
