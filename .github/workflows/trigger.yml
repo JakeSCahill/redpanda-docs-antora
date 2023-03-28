@@ -10,6 +10,10 @@ jobs:
   trigger:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Homebrew
+        run: |
+          /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
       - name: Install Helm Docs
         run: |
           brew install norwoodj/tap/helm-docs
