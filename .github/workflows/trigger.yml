@@ -13,6 +13,7 @@ jobs:
       - name: Download helm-docs
         run: |
           curl -sL https://github.com/norwoodj/helm-docs/releases/download/v1.11.0/helm-docs_1.11.0_Linux_arm64.tar.gz | tar xz
+          ls
           
       - name: Add helm-docs to $PATH
         run: |
