@@ -41,8 +41,8 @@ jobs:
       - name: Copy Helm Docs output to redpanda-docs-antora
         run: |
           ls -R
-          cp helm-charts/charts/redpanda/README.md redpanda-docs-antora/docs/reference/
-          cp helm-charts/charts/console/README.md redpanda-docs-antora/docs/reference/
+          cp helm-charts/charts/redpanda/README.md redpanda-docs-antora/docs/reference/redpanda-helm-spec.mdx
+          cp helm-charts/charts/console/README.md redpanda-docs-antora/docs/reference/console-helm-spec.mdx
         working-directory: ${{ github.workspace }}
 
       - name: Print redpanda-docs-antora directory contents
