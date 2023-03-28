@@ -3,6 +3,8 @@ name: Trigger redpanda-docs-antora
 on:
   push:
     branches: [dev]
+  #repository_dispatch:
+    #types: [trigger-redpanda-docs-antora]
 
 jobs:
   trigger:
@@ -11,7 +13,7 @@ jobs:
       - name: Download helm-docs
         run: |
           curl -sL https://github.com/norwoodj/helm-docs/releases/download/v1.11.0/helm-docs_1.11.0_Linux_x86_64.tar.gz | tar xz
-          
+
       - name: Add helm-docs to $PATH
         run: |
           echo "helm-docs" >> $GITHUB_PATH
@@ -21,30 +23,40 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: redpanda-data/helm-charts
+          ref: main
+          path: helm-charts
 
       - name: Generate Helm Docs
         run: |
           helm-docs
-          
+        working-directory: ./helm-charts
+
       - name: Checkout redpanda-docs-antora
         uses: actions/checkout@v2
         with:
           repository: JakeSCahill/redpanda-docs-antora
           ref: dev
+          path: redpanda-docs-antora
 
       - name: Copy Helm Docs output to redpanda-docs-antora
         run: |
-          ls
-          cp ../helm-charts/charts/redpanda/README.md docs/reference/
-        working-directory: redpanda-docs-antora
-          
+          ls -R
+          cp helm-charts/charts/redpanda/README.md redpanda-docs-antora/docs/modules/ROOT/pages/reference/
+        working-directory: ${{ github.workspace }}
+
+      - name: Print redpanda-docs-antora directory contents
+        run: |
+          ls -R redpanda-docs-antora
+        working-directory: ${{ github.workspace }}
+
       - name: Commit changes
         run: |
+          cd redpanda-docs-antora
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
-          git add docs/reference/*
+          git add docs/modules/ROOT/pages/reference/*
           git commit -m "Add updated Helm Docs"
-          git push
-        working-directory: redpanda-docs-antora
+          git push origin dev
+        working-directory: ${{ github.workspace }}
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
