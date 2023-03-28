@@ -13,8 +13,11 @@ jobs:
       - name: Install Homebrew
         run: |
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-      - name: Add Homebrew to PATH
-        run: echo 'export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"' >> $GITHUB_ENV
+          
+      - name: Add Homebrew to $PATH
+        run: |
+          echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $HOME/.bashrc
+          eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
       - name: Install Helm Docs
         run: |
