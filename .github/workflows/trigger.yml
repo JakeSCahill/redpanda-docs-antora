@@ -3,8 +3,6 @@ name: Trigger redpanda-docs-antora
 on:
   push:
     branches: [dev]
-  #repository_dispatch:
-    #types: [trigger-redpanda-docs-antora]
 
 jobs:
   trigger:
@@ -37,16 +35,16 @@ jobs:
       - name: Copy Helm Docs output to redpanda-docs-antora
         run: |
           ls
-          cp charts/redpanda/README.md redpanda-docs-antora/docs/reference/
-        working-directory: ${{ github.workspace }}
-        
+          cp ../helm-charts/charts/redpanda/README.md docs/reference/
+        working-directory: redpanda-docs-antora
+          
       - name: Commit changes
         run: |
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
-          git add redpanda-docs-antora/docs/reference/*
+          git add docs/reference/*
           git commit -m "Add updated Helm Docs"
           git push
-        working-directory: ${{ github.workspace }}
+        working-directory: redpanda-docs-antora
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
