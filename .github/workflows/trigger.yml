@@ -12,6 +12,7 @@ jobs:
     steps:
       - name: Install Homebrew
         run: |
+          sudo apt install build-essential
           /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
           
       - name: Add Homebrew to $PATH
@@ -21,7 +22,7 @@ jobs:
 
       - name: Install Helm Docs
         run: |
-          brew install norwoodj/tap/helm-docs
+          ./home/linuxbrew/.linuxbrew/bin/brew install norwoodj/tap/helm-docs
 
       - name: Checkout helm-charts repository
         uses: actions/checkout@v2
