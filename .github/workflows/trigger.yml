@@ -42,6 +42,7 @@ jobs:
         run: |
           ls -R
           cp helm-charts/charts/redpanda/README.md redpanda-docs-antora/docs/reference/
+          cp helm-charts/charts/console/README.md redpanda-docs-antora/docs/reference/
         working-directory: ${{ github.workspace }}
 
       - name: Print redpanda-docs-antora directory contents
