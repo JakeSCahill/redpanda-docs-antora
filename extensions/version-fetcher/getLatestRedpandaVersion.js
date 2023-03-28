@@ -10,8 +10,6 @@ const github = new OctokitWithRetries({
   auth: process.env.GITHUB_TOKEN
 })
 
-if (!process.env.GITHUB_TOKEN) return
-
 var latestRedpandaReleaseVersion;
 var latestRedpandaReleaseCommitHash;
 

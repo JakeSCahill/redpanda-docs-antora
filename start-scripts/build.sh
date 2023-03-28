@@ -2,7 +2,6 @@
 
 # Get the latest Redpanda Console version
 export CONSOLE_VERSION=$(node start-scripts/getLatestConsoleVersion.js);
-echo $CONSOLE_VERSION;
 
 # Set the ALGOLIA environment variables
 export ALGOLIA_API_KEY=2639b1b6c05670f52200b301c84866d9;
