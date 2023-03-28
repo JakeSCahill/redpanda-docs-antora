@@ -1,0 +1,40 @@
+name: Trigger redpanda-docs-antora
+
+on:
+  push:
+    branches: [dev]
+  #repository_dispatch:
+    #types: [trigger-redpanda-docs-antora]
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Helm Docs
+        run: |
+          brew install norwoodj/tap/helm-docs
+
+      - name: Checkout helm-charts repository
+        uses: actions/checkout@v2
+        with:
+          repository: redpanda-data/helm-charts
+
+      - name: Generate Helm Docs
+        run: |
+          helm-docs
+
+      - name: Copy Helm Docs output to redpanda-docs-antora
+        run: |
+          cp charts/redpanda/README.md redpanda-docs-antora/docs/reference/
+        working-directory: ${{ github.workspace }}
+        
+      - name: Commit changes
+        run: |
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add redpanda-docs-antora/docs/reference/*
+          git commit -m "Add updated Helm Docs"
+          git push
+        working-directory: ${{ github.workspace }}
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
