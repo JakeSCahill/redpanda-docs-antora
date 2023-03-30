@@ -22,7 +22,7 @@ jobs:
       - name: Checkout helm-charts repository
         uses: actions/checkout@v2
         with:
-          repository: redpanda-data/helm-charts
+          repository: JakeSCahill/helm-charts
           ref: main
           path: helm-charts
 
