@@ -49,8 +49,21 @@ jobs:
         run: |
           ls -R redpanda-docs-antora
         working-directory: ${{ github.workspace }}
+        
+      - name: Check if changes were made
+        id: check_changes
+        run: |
+          cd redpanda-docs-antora
+          changes=$(git status --porcelain)
+          if [ -z "$changes" ]; then
+            echo "has_changes=false" >> $GITHUB_ENV
+          else
+            echo "has_changes=true" >> $GITHUB_ENV
+          fi
+        working-directory: ${{ github.workspace }}
 
       - name: Commit changes
+        if: env.has_changes == 'true'
         run: |
           cd redpanda-docs-antora
           git config --global user.email "github-actions@github.com"
