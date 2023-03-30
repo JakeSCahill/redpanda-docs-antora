@@ -1,6 +1,6 @@
 # redpanda
 
-![Version: 3.0.7](https://img.shields.io/badge/Version-3.0.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v23.1.1](https://img.shields.io/badge/AppVersion-v23.1.1-informational?style=flat-square)
+![Version: 3.0.6](https://img.shields.io/badge/Version-3.0.6-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: v23.1.1](https://img.shields.io/badge/AppVersion-v23.1.1-informational?style=flat-square)
 
 Redpanda is the real-time engine for modern apps.
 
@@ -104,8 +104,6 @@ Kubernetes: `^1.21.0-0`
 | statefulset.initContainerImage.repository | string | `"busybox"` |  |
 | statefulset.initContainerImage.tag | string | `"latest"` |  |
 | statefulset.initContainers.configurator.resources | object | `{}` |  |
-| statefulset.initContainers.setDataDirOwnership.enabled | bool | `false` |  |
-| statefulset.initContainers.setDataDirOwnership.resources | object | `{}` |  |
 | statefulset.initContainers.setTieredStorageCacheDirOwnership.resources | object | `{}` |  |
 | statefulset.initContainers.tuning.resources | object | `{}` |  |
 | statefulset.livenessProbe.failureThreshold | int | `3` |  |
@@ -126,6 +124,7 @@ Kubernetes: `^1.21.0-0`
 | statefulset.securityContext.fsGroup | int | `101` |  |
 | statefulset.securityContext.fsGroupChangePolicy | string | `"OnRootMismatch"` |  |
 | statefulset.securityContext.runAsUser | int | `101` |  |
+| statefulset.skipChown | bool | `false` |  |
 | statefulset.startupProbe.failureThreshold | int | `120` |  |
 | statefulset.startupProbe.initialDelaySeconds | int | `1` |  |
 | statefulset.startupProbe.periodSeconds | int | `10` |  |
