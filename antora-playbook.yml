@@ -5,6 +5,8 @@ site:
 urls:
   html_extension_style: indexify
   redirect_facility: netlify
+  latest_version_segment: latest
+  latest_version_segment_strategy: redirect:to
 content:
   sources:
   - url: .
@@ -22,6 +24,10 @@ asciidoc:
   attributes:
     tabs-sync-option: true
     latest-console-version: 2.2.2@
+    idprefix: ''
+    idseparator: '-'
+    page-pagination: true
+    experimental: true
   extensions:
   - '@asciidoctor/tabs'
 antora:
