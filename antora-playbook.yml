@@ -1,7 +1,9 @@
 site:
   title: Redpanda Docs
   start_page: redpanda:get-started:intro-to-events.adoc
-  url: https://gentle-torte-7343b2.netlify.app/docs
+  url: https://gentle-torte-7343b2.netlify.app
+urls:
+  html_extension_style: indexify
 content:
   sources:
   - url: .
