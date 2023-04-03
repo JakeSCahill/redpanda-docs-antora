@@ -1,0 +1,10 @@
+[build.environment]
+NODE_VERSION = "16"
+
+# NOTE the following redirects get appended to the redirects defined in the _redirects file
+
+[[redirects]]
+from = "https://gentle-torte-7343b2.netlify.app/docs/*"
+to = "https://gentle-torte-7343b2.netlify.app/:splat"
+status = 301
+force = true
