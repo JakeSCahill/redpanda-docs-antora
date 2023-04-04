@@ -1,2 +1,9 @@
 name: home
 version: ~
+
+name: get-started
+title: Get Started
+version: '23.1'
+nav:
+- modules/get-started/nav.adoc
+- modules/ROOT/index.adoc
