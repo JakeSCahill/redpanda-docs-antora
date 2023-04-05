@@ -11,51 +11,6 @@ client libraries by creating a topic, producing some data, and consuming it
 back.
 
 
-[,yaml]
-----
-include::example$docker-compose.yml[]
-----
-
-////
-[,yaml,subs="attributes+"]
-----
-include::example$docker-compose.yml[]
-----
-////
-
-////
-[,yaml,subs="attributes+"]
-----
-include::example$docker-compose.yml[tags=ports]
-----
-////
-
-////
-[,yaml,subs="attributes+"]
-----
-include::example$docker-compose.yml[tag=**]
-----
-////
-
-////
-<details>
-<summary>
-</summary>
-</details>
-
-[%collapsible]
-====
-[,yaml]
-----
-include::example$docker-compose.yml[]
-----
-====
-////
-
-////
-callouts <1>
-////
-
 == Set up Redpanda
 
 Follow the link:quick-start.adoc[] guide to spin up a development
@@ -84,13 +39,15 @@ This Kafka client code example uses the [franz-go](https://github.com/twmb/franz
 
 ```bash
 # Create and enter the project folder
-mkdir redpanda-go; cd redpanda-go 
+mkdir redpanda-go; cd redpanda-go
 # Initialize the project 
-go mod init com/redpanda/example 
-# Install required dependencies 
-go get github.com/twmb/franz-go 
-go get github.com/twmb/franz-go/pkg/kadm 
-go get github.com/twmb/tlscfg 
+go mod init com/redpanda/example
+# Install required dependencies
+go get github.com/twmb/franz-go
+<test>
+<Test>
+go get github.com/twmb/franz-go/pkg/kadm
+go get github.com/twmb/tlscfg
 go get github.com/twmb/franz-go/pkg/sasl/scram@v1.9.0
 ```
 --
@@ -142,6 +99,7 @@ Go::
 .admin.go
 ```go
 package main
+<another-placeholder>
 
 import (
   "context"
@@ -151,7 +109,8 @@ import (
 )
 
 func main() {
-  topic := "demo"
+  topic := "demo <test><test>"
+  <test>
   seeds := []string{"localhost:9092"}
 
   client, err := kgo.NewClient(
