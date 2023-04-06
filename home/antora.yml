@@ -1,2 +1,109 @@
 name: home
 version: ~
+asciidoc:
+  attributes:
+    page-feature-list: [
+      {
+        title: 'Redpanda Quickstart',
+        image: quickstart.png,
+        description: 'Quickly get started and try out Redpanda.',
+        url: '/redpanda/get-started/quick-start',
+        learn-text: true,
+      },
+      {
+        title: 'Use rpk',
+        image: rpk-commands.png,
+        description: 'Browse commands or use rpk to interact with the Redpanda platform.',
+        url: '/redpanda/reference/rpk',
+        learn-text: true,
+      },
+      {
+        title: 'Deploy Redpanda',
+        image: rocket.png,
+        description: 'Configure Redpanda and deploy for production.',
+        url: '/redpanda/deploy',
+        learn-text: true,
+      },
+      {
+        title: 'Redpanda Console',
+        image: console-icon.png,
+        description: 'Use the Redpanda Console dashboard to administer clusters and get visibility into your data streams.',
+        url: '/redpanda/manage/console',
+        learn-text: true,
+      },
+      {
+        title: 'Tiered Storage',
+        image: cloud-first.png,
+        description: 'Save storage costs by offloading log segments to object storage.',
+        url: '/redpanda/manage/tiered-storage',
+        learn-text: true,
+      },
+      {
+        title: 'Redpanda on Kubernetes',
+        image: redpanda-kubernetes.png,
+        description: 'Get started with Redpanda on the Kubernetes platform.',
+        url: '/redpanda/deploy/deployment-option/self-hosted/kubernetes',
+        learn-text: true,
+      }
+    ]
+    page-footer-menu-list: [
+      {
+        title: 'Get Started',
+        icon: {
+          url: get-started-icon.png,
+          size: 'higher'
+        },
+        items: [
+          { text: 'Introduction to Redpanda', url: "/redpanda/get-started/intro-to-events/" },
+          { text: 'How Redpanda Works', url: "/redpanda/get-started/architecture/" },
+          { text: 'Redpanda Licensing', url: "/redpanda/get-started/licenses/" },
+          { text: 'Redpanda Quickstart', url: "/redpanda/get-started/quick-start/" },
+          { text: 'Introduction to rpk', url: "/redpanda/get-started/rpk-install/" },
+        ],
+      },
+      {
+        title: 'Develop',
+        icon: {
+          url: develop-icon.png,
+          size: 'wider',
+        },
+        items: [
+          { text: 'Supported Kafka Clients', url: "/redpanda/develop/kafka-clients/" },
+          { text: 'Use Redpanda with Kafka Client Libraries', url: "/redpanda/develop/code-examples/" },
+          { text: 'Use Redpanda with NodeJS', url: "/redpanda/develop/guide-nodejs/" },
+          { text: 'Use Redpanda with HTTP Proxy API', url: "/redpanda/develop/http-proxy/" },
+          { text: 'Produce Data', url: "/redpanda/develop/produce-data/" },
+          { text: 'Consume Data', url: "/redpanda/develop/consume-data/" },
+          { text: 'Transactions', url: "/redpanda/develop/transactions" },
+        ],
+      },
+      {
+        title: 'Deploy',
+        icon: {
+          url: deploy-icon.png,
+          size: 'wider',
+        },
+        items: [
+          { text: 'Cloud Deployment', url: "/redpanda/deploy/deployment-option/cloud/" },
+          { text: 'Self-Hosted Deployment', url: "/redpanda/deploy/deployment-option/self-hosted/" },
+          { text: 'Sizing Guidelines', url: "/redpanda/deploy/deployment-option/self-hosted/manual/sizing/" },
+          { text: 'Sizing Use Cases', url: "/redpanda/deploy/deployment-option/self-hosted/manual/sizing-use-cases/" },
+          { text: 'High Availability', url: "/redpanda/deploy/deployment-option/self-hosted/manual/high-availability/" },
+          { text: 'Redpanda on Kubernetes', url: "/redpanda/deploy/deployment-option/self-hosted/kubernetes/" },
+        ],
+      },
+      {
+        title: 'Manage',
+        icon: {
+          url: manage-icon.png,
+          size: 'default',
+        },
+        items: [
+          { text: 'Redpanda Console', url: "/redpanda/manage/console/" },
+          { text: 'Security', url: "/redpanda/manage/security/" },
+          { text: 'Schema Registry', url: "/redpanda/manage/schema-registry/" },
+          { text: 'Monitor Redpanda', url: "/redpanda/manage/monitoring/" },
+          { text: 'Continuous Data Balancing', url: "/redpanda/manage/cluster-maintenance/continuous-data-balancing/" },
+        ]
+      }
+    ]
