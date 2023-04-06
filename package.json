@@ -5,7 +5,7 @@
   "license": "ISC",
   "scripts": {
     "build": "./start-scripts/build.sh",
-    "serve": "http-server -o /docs -s -c-1"
+    "serve": "http-server -o /docs/home -s -c-1"
   },
   "dependencies": {
     "@asciidoctor/tabs": "^1.0.0-beta.3",
