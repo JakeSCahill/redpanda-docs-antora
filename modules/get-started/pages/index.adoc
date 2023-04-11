@@ -1,0 +1,2 @@
+= Get Started
+:page-layout: index
