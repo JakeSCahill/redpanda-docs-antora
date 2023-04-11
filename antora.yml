@@ -8,14 +8,3 @@ asciidoc:
     latest-release-commit: 63fea9a@
 nav:
 - modules/get-started/nav.adoc
-
-name: redpanda
-title: Redpanda
-version: 22.3
-start_page: develop:index.adoc
-asciidoc:
-  attributes:
-    full-version: 22.3.14@
-    latest-release-commit: 63fea9a@
-nav:
-- modules/develop/nav.adoc
