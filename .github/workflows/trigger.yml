@@ -25,7 +25,7 @@ jobs:
           repository: redpanda-data/helm-charts
           ref: main
           path: helm-charts
-          token: ${{ secrets.ACCESS_TOKEN }}
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
 
       - name: Generate Helm Docs
         run: |
@@ -38,7 +38,7 @@ jobs:
           repository: JakeSCahill/redpanda-docs-antora
           ref: dev
           path: redpanda-docs-antora
-          token: ${{ secrets.ACCESS_TOKEN }}
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
 
       - name: Copy Helm Docs output to redpanda-docs-antora
         run: |
