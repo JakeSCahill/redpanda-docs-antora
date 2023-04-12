@@ -25,6 +25,7 @@ jobs:
           repository: redpanda-data/helm-charts
           ref: main
           path: helm-charts
+          persist-credentials: false
 
       - name: Generate Helm Docs
         run: |
@@ -37,6 +38,7 @@ jobs:
           repository: JakeSCahill/redpanda-docs-antora
           ref: dev
           path: redpanda-docs-antora
+          persist-credentials: false
 
       - name: Copy Helm Docs output to redpanda-docs-antora
         run: |
