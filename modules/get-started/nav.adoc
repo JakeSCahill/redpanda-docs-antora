@@ -1,4 +1,2 @@
 * xref:index.adoc[]
-** xref:intro-to-events.adoc[]
-** xref:architecture.adoc[]
-** xref:code-examples.adoc[]
+** xref:how-to-develop.adoc[]

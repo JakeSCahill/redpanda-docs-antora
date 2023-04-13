@@ -1,0 +1,12 @@
+= How to develop new stuff
+:page-layout: index
+
+This is a code block
+
+....java
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!"); 
+    }
+}
+....
