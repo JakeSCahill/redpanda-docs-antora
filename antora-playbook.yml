@@ -32,7 +32,8 @@ asciidoc:
   extensions:
   - '@asciidoctor/tabs'
   - '@djencks/asciidoctor-glossary'
+  - './macros/swagger-ui.js'
 antora:
   extensions:
-  - ./extensions/version-fetcher/set-latest-version.js
+  - './extensions/version-fetcher/set-latest-version.js'
 
