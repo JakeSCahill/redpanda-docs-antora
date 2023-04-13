@@ -1,6 +1,7 @@
 = Introduction to Redpanda {page-version}
 :pp: {plus}{plus}
 :description: Explanation of Redpanda event streaming.
+:page-context-links: [{"name": "Test one", "to": "intro-to-events.adoc" },{"name": "Test two", "to": "architecture.adoc" } ]
 
 hello
 

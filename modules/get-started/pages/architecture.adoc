@@ -1,5 +1,6 @@
 = How Redpanda Works
 :description: Overview of Redpanda architecture.
+:page-context-links: [{"name": "Test one", "to": "intro-to-events.adoc" },{"name": "Test two", "to": "architecture.adoc" } ]
 
 test
 
