@@ -27,8 +27,12 @@ asciidoc:
     idseparator: '-'
     page-pagination: true
     experimental: true
+    glossary-links: 'false'
+    glossary-tooltip: 'data-tippy-content'
   extensions:
   - '@asciidoctor/tabs'
+  - '@djencks/asciidoctor-glossary'
 antora:
   extensions:
   - ./extensions/version-fetcher/set-latest-version.js
+
