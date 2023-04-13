@@ -1,5 +1,4 @@
 = How to develop new stuff
-:page-layout: index
 
 This is a code block
 
