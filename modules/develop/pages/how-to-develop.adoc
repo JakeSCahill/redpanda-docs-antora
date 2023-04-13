@@ -1,11 +1,12 @@
-= How to develop new stuff
+= How to develop new stuff in Java
 
 This is a code block
 
-....java
+[source,java]
+----
 class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!"); 
     }
 }
-....
+----
