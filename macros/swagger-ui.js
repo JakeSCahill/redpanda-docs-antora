@@ -1,3 +1,16 @@
+/* Example use in a page
+* Save the file in the attachments directory.
+*
+* :page-layout: swagger
+* swagger_ui::{attachmentsdir}/pandaproxy-rest.json[]
+*
+* Example use in playbook
+*
+* asciidoc:
+    extensions:
+    - './macros/swagger-ui.js'
+*/
+
 const buildSwaggerUi = ({ specUrl }) => `
 <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700|Roboto:300,400,700" rel="stylesheet">
 <redoc spec-url='${specUrl}'></redoc>

@@ -1,6 +1,11 @@
 [build.environment]
 NODE_VERSION = "16"
 
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+
 # NOTE the following redirects get appended to the redirects defined in the _redirects file
 
 [[redirects]]
