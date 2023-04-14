@@ -21,6 +21,7 @@ ui:
     snapshot: true
 asciidoc:
   attributes:
+    source-highlighter: ~
     tabs-sync-option: true
     latest-console-version: 2.2.2@
     idprefix: ''
