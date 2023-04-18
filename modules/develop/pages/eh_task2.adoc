@@ -7,4 +7,4 @@ In this module, see xref:develop:index.adoc[the index page].
 
 In another module, see xref:get-started:architecture.adoc[Redpanda v22.3 Architecture Overview].
 
-In 23.1, see xref:23.1@redpanda:get-started:codes-examples.adoc[Redpanda v23.1 Code Examples].
+In 23.1, see xref:23.1@redpanda:get-started:code-examples.adoc[Redpanda v23.1 Code Examples].
