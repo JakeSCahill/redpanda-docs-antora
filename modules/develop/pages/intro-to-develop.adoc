@@ -4,3 +4,7 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 
 Quisque efficitur mattis nulla vitae egestas. Maecenas facilisis suscipit vehicula. Nullam rhoncus in velit quis aliquet. Nam fringilla massa vel neque commodo, eget consectetur libero fermentum. Integer non vulputate erat, at bibendum quam. Phasellus turpis arcu, feugiat sit amet bibendum vel, maximus in nulla. In hac habitasse platea dictumst. Suspendisse sed iaculis nulla. In gravida erat sit amet odio placerat, quis egestas tellus tincidunt. Donec tristique nulla vel sem finibus volutpat id a urna.
+
+To see a new cross reference work, see xref:new-file-for-links.adoc[].
+
+See also: xref:get-started:architecture.adoc[] or xref:23.1@get-started:architecture.adoc#_tiered_storage[Tiered Storage from 23.1]
