@@ -5,6 +5,8 @@ content:
   sources:
   - url: .
     branches: HEAD
+  - url: https://github.com/JakeSCahill/redpanda-docs-antora
+    branches: [v23.1]
 ui:
   bundle:
     url: https://github.com/JakeSCahill/redpanda-docs-ui/releases/latest/download/ui-bundle.zip
