@@ -5,6 +5,7 @@
   "license": "ISC",
   "scripts": {
     "build": "./start-scripts/build.sh",
+    "build-windows": "./start-scripts/build.bat",
     "serve": "http-server -o /docs/home -s -c-1"
   },
   "dependencies": {
