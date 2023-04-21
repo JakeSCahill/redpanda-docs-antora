@@ -1,7 +1,6 @@
 'use strict'
 
 const $glossaryContexts = Symbol('$glossaryContexts')
-const yaml = require("js-yaml");
 
 module.exports.register = function (registry, config = {}) {
 
