@@ -17,7 +17,7 @@ content:
     branches: main
 ui:
   bundle:
-    url: ../redpanda-docs-ui/build/ui-bundle.zip
+    url: https://github.com/JakeSCahill/redpanda-docs-ui/releases/latest/download/ui-bundle.zip
     snapshot: true
 asciidoc:
   attributes:
