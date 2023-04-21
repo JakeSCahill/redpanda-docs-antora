@@ -1,6 +1,7 @@
 'use strict'
 
 const $glossaryContexts = Symbol('$glossaryContexts')
+const { posix: path } = require('path')
 
 module.exports.register = function (registry, config = {}) {
 
@@ -111,7 +112,10 @@ module.exports.register = function (registry, config = {}) {
         const links = document.getAttribute('glossary-links', 'true') === 'true'
         var glossaryPage = document.getAttribute('glossary-page', '')
         if (glossaryPage.endsWith('.adoc')) {
-          glossaryPage = glossaryPage.slice(0, -5) + '.html'
+          const page = config.contentCatalog.resolvePage(glossaryPage, config.file.src)
+          const relativizedPath = path.relative(path.dirname(config.file.pub.url), page.pub.url)
+          const prefix = attributes.prefix
+          glossaryPage = prefix ? [prefix, relativizedPath].join('/') : relativizedPath
         }
         const glossaryTermRole = document.getAttribute('glossary-term-role', 'glossary-term')
         const attrs = glossaryTermRole ? { role: glossaryTermRole } : {}
