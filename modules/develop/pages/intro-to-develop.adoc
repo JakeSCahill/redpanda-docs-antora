@@ -1,6 +1,8 @@
 = Intro to Develop
 :description: Overview of development.
 
+include::partial$denver-warning.adoc[]
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 
 Quisque efficitur mattis nulla vitae egestas. Maecenas facilisis suscipit vehicula. Nullam rhoncus in velit quis aliquet. Nam fringilla massa vel neque commodo, eget consectetur libero fermentum. Integer non vulputate erat, at bibendum quam. Phasellus turpis arcu, feugiat sit amet bibendum vel, maximus in nulla. In hac habitasse platea dictumst. Suspendisse sed iaculis nulla. In gravida erat sit amet odio placerat, quis egestas tellus tincidunt. Donec tristique nulla vel sem finibus volutpat id a urna.
