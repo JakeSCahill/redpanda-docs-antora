@@ -61,7 +61,7 @@ With the link:../../deploy/deployment-option/cloud/dedicated-byoc[Bring Your Own
 
 == Next steps
 
-Learn more details about xref:architecture.adoc[How Redpanda Works].
+Learn more details about xref:get-started:architecture.adoc[How Redpanda Works].
 
 == Suggested links
 

@@ -1,4 +1,9 @@
 = New File for Links
 :description: file for testing links.
 
+include::partial$suggested-links.adoc[]
+include::partial$avoid-tune-all-caution.adoc[]
+
+
 testing
+
