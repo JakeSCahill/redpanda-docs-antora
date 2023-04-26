@@ -1,6 +1,8 @@
 = Edward's Task 2 Page
 :description: Description
 
+include::partial$warning.adoc[]
+
 Let's Go Warriors!
 
 In this module, see xref:develop:index.adoc[the index page].
