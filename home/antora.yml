@@ -2,6 +2,8 @@ name: home
 version: ~
 asciidoc:
   attributes:
+    page-hide-view-latest: true
+    page-exclude-from-dropdown-selector: true
     page-feature-list:
       - title: 'Redpanda Quickstart'
         image: quickstart.png

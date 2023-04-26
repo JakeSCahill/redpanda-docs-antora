@@ -38,7 +38,7 @@ asciidoc:
       link: https://www.google.com
   extensions:
   - '@asciidoctor/tabs'
-  - './extensions/glossary.js'
+  - './macros/glossary.js'
 antora:
   extensions:
   - './extensions/version-fetcher/set-latest-version.js'
