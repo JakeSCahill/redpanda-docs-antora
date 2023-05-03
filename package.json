@@ -5,12 +5,14 @@
   "license": "ISC",
   "scripts": {
     "build": "antora --to-dir docs --fetch antora-playbook.yml",
-    "serve": "http-server -o /docs -s -c-1"
+    "start": "npm run build && wds --node-resolve --open index.html --watch --root-dir docs"
   },
   "dependencies": {
-    "@asciidoctor/tabs": "^1.0.0-beta.3",
     "@antora/cli": "3.1.2",
     "@antora/site-generator": "3.1.2",
-    "http-server": "^14.1.1"
+    "@asciidoctor/tabs": "^1.0.0-beta.3"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.2.1"
   }
 }
