@@ -4,9 +4,8 @@
   "description": "Redpanda documentation",
   "license": "ISC",
   "scripts": {
-    "build": "./start-scripts/build.sh",
-    "build-windows": "./start-scripts/build.bat",
-    "serve": "http-server -o /docs/home -s -c-1"
+    "build": "cross-env-shell \"if [ \\\"$OSTYPE\\\" = \\\"msys\\\" ] || [ \\\"$OSTYPE\\\" = \\\"cygwin\\\" ] || [ \\\"$OSTYPE\\\" = \\\"win32\\\" ]; then ./start-scripts/build.bat; else ./start-scripts/build.sh; fi\"",
+    "start": "npm run build && wds --node-resolve --open home/index.html --watch --root-dir docs"
   },
   "dependencies": {
     "@antora/cli": "3.1.2",
@@ -14,7 +13,10 @@
     "@asciidoctor/tabs": "^1.0.0-beta.3",
     "@mdx-js/mdx": "^2.3.0",
     "@octokit/plugin-retry": "^4.1.3",
-    "@octokit/rest": "^19.0.7",
-    "http-server": "^14.1.1"
+    "@octokit/rest": "^19.0.7"
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.2.1",
+    "cross-env": "^7.0.3"
   }
 }
