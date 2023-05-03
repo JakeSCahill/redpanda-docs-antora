@@ -1,5 +1,7 @@
-= Edward's Task 2 Page
+= Edward's Tasks Page
 :description: Description
+:show-update:  
+:authors: Bob
 
 include::partial$warning.adoc[]
 
@@ -10,3 +12,7 @@ In this module, see xref:develop:index.adoc[the index page].
 In another module, see xref:get-started:architecture.adoc[Redpanda v22.3 Architecture Overview].
 
 In 23.1, see xref:23.1@redpanda:get-started:code-examples.adoc[Redpanda v23.1 Code Examples].
+
+ifdef::show-update[]
+Last updated on {docdatetime} 
+endif::[]
