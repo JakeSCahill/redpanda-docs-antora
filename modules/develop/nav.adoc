@@ -1,3 +1,5 @@
 * xref:index.adoc[]
 ** xref:intro-to-develop.adoc[]
 ** xref:new-file-for-links.adoc[]
+** xref:monitor-in-linux.adoc[]
+** xref:monitor-in-kubernetes.adoc[]

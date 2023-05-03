@@ -1,0 +1,8 @@
+= Monitor Redpanda in Kubernetes
+:description: Monitor Redpanda in Kubernetes.
+
+:kubernetes: kubernetes
+
+
+include::partial$monitor-conditionals.adoc[]
+
