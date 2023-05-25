@@ -3,7 +3,7 @@
 
 Test table 1 
 
-[cols="1,1"]
+[cols="1,1a"]
 |===
 |*Cell in column 1*, header row |Cell in column 2, header row
 
