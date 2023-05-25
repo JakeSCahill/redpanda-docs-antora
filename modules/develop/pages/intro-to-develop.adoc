@@ -4,9 +4,137 @@
 include::partial$denver-warning.adoc[]
 include::partial$avoid-tune-all-caution.adoc[]
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+Lorem ipsum dolor sit amet, consectetur adipiscing *elit*. 
 
 Quisque efficitur mattis nulla vitae egestas. Maecenas facilisis suscipit vehicula. Nullam rhoncus in velit quis aliquet. Nam fringilla massa vel neque commodo, eget consectetur libero fermentum. Integer non vulputate erat, at bibendum quam. Phasellus turpis arcu, feugiat sit amet bibendum vel, maximus in nulla. In hac habitasse platea dictumst. Suspendisse sed iaculis nulla. In gravida erat sit amet odio placerat, quis egestas tellus tincidunt. Donec tristique nulla vel sem finibus volutpat id a urna.
+
+== Testing tables 
+
+[cols="1,1"]
+|===
+
+|storage_space_alert_free_threshold_bytes 
+|Minimum free disk space allowed, in bytes. 
+ 
+|storage_space_alert_free_threshold_percent
+|Minimum free disk space allowed, in percentage of total available space for that drive.    
+|=== 
+
+[cols="1,1"]
+|===
+|Property, as header line |Description
+
+|storage_space_alert_free_threshold_bytes 
+|Minimum free disk space allowed, in bytes. 
+ 
+|storage_space_alert_free_threshold_percent
+|Minimum free disk space allowed, in percentage of total available space for that drive.    
+|=== 
+
+[%noheader]
+[cols="1,1"]
+|===
+|Property, with noheader set |Description
+
+|`storage_space_alert_free_threshold_bytes` 
+|Minimum free disk space allowed, in *bytes*. 
+ 
+|`storage_space_alert_free_threshold_percent`  
+|Minimum free disk space allowed, in *percentage of total available space for that drive*.    
+|=== 
+
+[cols="2,1,1"]
+|===
+|`storage_space_alert_free_threshold_bytes` 
+|Yes
+|Minimum free disk space allowed, in bytes. 
+ 
+|`storage_space_alert_free_threshold_percent`  |No |Minimum free disk space allowed, in percentage of total available space for that drive.    
+|=== 
+
+[cols="2,1,1"]
+|===
+|`storage_space_alert_free_threshold_bytes` 
+|
+
+* first bullet
+* second bullet
+* third bullet
+|Minimum free disk space allowed, in bytes. 
+ 
+|`storage_space_alert_free_threshold_percent`  
+|
+```yaml
+rpk:
+  tune_ballast_file: true
+  ballast_file_path: "/var/lib/redpanda/data/ballast"
+  ballast_file_size: "1GiB"
+``` 
+|Minimum free disk space allowed, in percentage of total available space for that drive.    
+|=== 
+
+== Testing lists
+
+* one thing
+* another thing 
+* another thing
+
+- one thing
+- another thing 
+- another thing
+
+Lorem ipsum dolor sit amet, consectetur adipiscing *elit*. 
+
+- one thing
+-- another thing 
+-- another thing
+
+- one thing
+-- another thing 
+-- another thing
+--- another thing 
+--- another thing
+
+
+//-
+
+- one thing
+- another thing 
++
+```yaml
+rpk:
+  tune_ballast_file: true
+  ballast_file_path: "/var/lib/redpanda/data/ballast"
+  ballast_file_size: "1GiB"
+``` 
+- another thing
++
+include::partial$denver-warning.adoc[]
+- another thing
+
+Lorem ipsum dolor sit amet, consectetur adipiscing *elit*. 
+
+1. one thing
+2. another thing 
+3. another thing
+
+Lorem ipsum dolor sit amet, consectetur adipiscing *elit*. 
+
+[start=1]
+. one thing
+. another thing 
+. another thing
+. another thing 
+. another thing
+
+//-
+
+[start=1]
+. one thing
+. another thing 
+.. a subthing
+.. a subthing 
+. another thing
 
 == Heading 
 
