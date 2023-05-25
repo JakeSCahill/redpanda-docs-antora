@@ -16,16 +16,19 @@ public class Main {
 , row 2
 
 |<code>Cell</code> in column 1, row 3
-|Cell in column 2, row 3
+|`Cell in column 2`, row 3
 
 |== Section Title
 
 Content of section., row 4
-|link:Avengers%3A Endgame.html[], row 4
+|https://asciidoctor.org[Asciidoctor], row 4
 |===
 
 
-copy example from site
+
+= Lists
+
+copy list example from site
 
 * The header in AsciiDoc must start with a document title.
 +
@@ -42,3 +45,19 @@ Keep in mind that the header is optional.
 Doc Writer <doc.writer@asciidoc.org>
 v1.0, 2022-01-01
 ----
+
+= Ordered Lists
+
+. open
+. check params
+.. add new params
+.. edit existing
+. run
+
+
+= Check list
+
+
+* [*] This checks
+* [x] This should also check
+* [ ] uncheck
