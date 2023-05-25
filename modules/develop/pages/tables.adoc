@@ -8,18 +8,19 @@ Test table 1
 |*Cell in column 1*, header row |Cell in column 2, header row
 
 |**Cell in column 1**, row 2
-|+
-
+|
 [source,java]
 ----
 public class Main {
     Cell in column 2}
-+, row 2
+, row 2
 
 |<code>Cell</code> in column 1, row 3
 |Cell in column 2, row 3
 
-|Cell in column 1, row 4
+|== Section Title
+
+Content of section., row 4
 |link:Avengers%3A Endgame.html[], row 4
 |===
 
