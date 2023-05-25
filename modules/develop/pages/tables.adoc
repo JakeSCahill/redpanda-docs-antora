@@ -22,11 +22,14 @@ public class Main {
 
 Content of section., row 4
 |https://asciidoctor.org[Asciidoctor], row 4
+|abc123 
+| NOTE: The header is optional.
+|Can it be uneven? 
 |===
 
 
 
-= Lists
+== Lists
 
 copy list example from site
 
@@ -46,7 +49,7 @@ Doc Writer <doc.writer@asciidoc.org>
 v1.0, 2022-01-01
 ----
 
-= Ordered Lists
+== Ordered Lists
 
 . open
 . check params
@@ -55,7 +58,7 @@ v1.0, 2022-01-01
 . run
 
 
-= Check list
+== Check list
 
 
 * [*] This checks
