@@ -1,6 +1,8 @@
 = Kafka Client Code Examples
 :description: How to produce to and consume from Redpanda in a variety of languages.
 
+test
+
 Redpanda is Kafka API-compatible, which means that despite Redpanda being a
 new streaming data platform, you can leverage the countless client libraries
 that have been created for Kafka. If you find something that is not
