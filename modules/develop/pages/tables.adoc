@@ -1,0 +1,76 @@
+= Tables Tables
+
+
+Test table 1 
+
+[cols="1,1a"]
+|===
+|*Cell in column 1*, header row |Cell in column 2, header row
+
+|**Cell in column 1**, row 2
+|
+[source,java]
+----
+public class Main {
+    Cell in column 2}
+, row 2
+
+|<code>Cell</code> in column 1, row 3
+|`Cell in column 2`, row 3
+
+|== Section Title
+
+Content of section., row 4
+|https://asciidoctor.org[Asciidoctor], row 4
+|abc123 
+| NOTE: The header is optional.
+|Can it be uneven? 
+|===
+
+
+[cols="2,1,3"]
+|===
+|Column 1 |Column 2 |Column 3
+
+|This column has a proportional width of 2
+|This column has a proportional width of 1
+|This column has a proportional width of 3
+|===
+
+
+
+== Lists
+
+copy list example from site
+
+* The header in AsciiDoc must start with a document title.
++
+----
+= Document Title
+----
++
+Keep in mind that the header is optional.
+
+* Optional author and revision information lines immediately follow the document title.
++
+----
+= Document Title
+Doc Writer <doc.writer@asciidoc.org>
+v1.0, 2022-01-01
+----
+
+== Ordered Lists
+
+. open
+. check params
+.. add new params
+.. edit existing
+. run
+
+
+== Check list
+
+
+* [*] This checks
+* [x] This should also check
+* [ ] uncheck
