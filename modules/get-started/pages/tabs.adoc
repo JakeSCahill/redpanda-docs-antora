@@ -1,0 +1,29 @@
+= Tabs Exercise
+
+* Tab links
+** link:#_tabs_1_alpha[Alpha]
+** link:#_tabs_1_bravo[Bravo] 
+** link:#_tabs_1_charlie[Charlie]
+
+[tabs]
+======
+Alpha::
++
+--
+Contents of Tab A.
+--
+
+Bravo::
++
+--
+Contents of Tab B.
+--
+
+Charlie::
++
+--
+Contents of Tab C.
+
+Contains more than one block.
+--
+======
