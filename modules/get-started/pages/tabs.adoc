@@ -1,0 +1,53 @@
+= Antora Tabs
+:description: Overview of using tabs in Antora.
+
+Tabs in documentation can enhance the user experience and make information more digestible:
+
+[tabs]
+======
+Linux::
++
+--
+This is the command specific of Linux
+--
+
+Windows::
++
+--
+In Windows you'll do things differently. 
+--
+
+macOS::
++
+--
+For macOS you can copy the same things from Linux.
+
+Plus you'll have to add this one thing too.
+--
+======
+
+
+This is a different tab approach.
+
+[tabs]
+======
+Tab A::
++
+--
+Contents of Tab A.
+--
+
+Tab B::
++
+--
+Contents of Tab B.
+--
+
+Tab C::
++
+--
+Contents of Tab C.
+
+Contains more than one block.
+--
+======
