@@ -27,27 +27,7 @@ Plus you'll have to add this one thing too.
 ======
 
 
-This is a different tab approach.
+Those are actually buttons
 
-[tabs]
-======
-Tab A::
-+
---
-Contents of Tab A.
---
+:page-context-links: [{"name": "Button ONE", "to": "intro-to-events.adoc" },{"name": "Button TWO", "to": "architecture.adoc" } ]
 
-Tab B::
-+
---
-Contents of Tab B.
---
-
-Tab C::
-+
---
-Contents of Tab C.
-
-Contains more than one block.
---
-======
