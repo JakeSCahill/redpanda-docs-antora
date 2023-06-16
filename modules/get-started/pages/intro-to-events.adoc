@@ -8,7 +8,7 @@ You can link to other tabs too by using link:tabs?tab=_tabs_1_macos[Section A]
 
 You can link to other tabs too by using link:tabs?tab=_tabs_2_windows[Section B]
 
-Linking to a tab with anchor tag {link-with-anchor}
+Linking to a tab with anchor tag {link-with-anchor}[Section B]
 
 Distributed systems often require data and system updates to happen as quickly as possible. In software architecture, these updates can be handled with either messages or events.
 
