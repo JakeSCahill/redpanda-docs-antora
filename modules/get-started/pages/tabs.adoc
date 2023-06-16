@@ -27,7 +27,27 @@ Plus you'll have to add this one thing too.
 ======
 
 
-Those are actually buttons
+What if I have the same set of tabs ?
 
-test test
+[tabs]
+======
+Linux::
++
+--
+This is the command specific of Linux
+--
 
+Windows::
++
+--
+In Windows you'll do things differently. 
+--
+
+macOS::
++
+--
+For macOS you can copy the same things from Linux.
+
+Plus you'll have to add this one thing too.
+--
+======
