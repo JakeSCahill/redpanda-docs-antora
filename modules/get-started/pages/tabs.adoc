@@ -55,7 +55,6 @@ Plus you'll have to add this one thing too.
 
 CAUTION: So it looks like their names must be different if you want to create a different context 
 
-What if I have the same set of tabs ?
 
 [tabs]
 ======
@@ -63,6 +62,7 @@ abc::
 +
 --
 This is the command specific of Linux
+
 WARNING: testing admonitions inside tabs
 --
 
