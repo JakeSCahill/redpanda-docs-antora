@@ -1,5 +1,6 @@
 = Antora Tabs
 :description: Overview of using tabs in Antora.
+:page-context-links: [{"name": "Button ONE", "to": "intro-to-events.adoc" },{"name": "Button TWO", "to": "architecture.adoc" } ]
 
 Tabs in documentation can enhance the user experience and make information more digestible:
 
@@ -29,5 +30,5 @@ Plus you'll have to add this one thing too.
 
 Those are actually buttons
 
-:page-context-links: [{"name": "Button ONE", "to": "intro-to-events.adoc" },{"name": "Button TWO", "to": "architecture.adoc" } ]
+test test
 
