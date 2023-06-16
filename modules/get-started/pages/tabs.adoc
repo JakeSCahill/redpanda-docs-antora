@@ -51,3 +51,31 @@ For macOS you can copy the same things from Linux.
 Plus you'll have to add this one thing too.
 --
 ======
+
+
+So it looks like their names must be different if you want to create a different context 
+
+What if I have the same set of tabs ?
+
+[tabs]
+======
+abc::
++
+--
+This is the command specific of Linux
+--
+
+xyz::
++
+--
+In Windows you'll do things differently. 
+--
+
+jkl::
++
+--
+For macOS you can copy the same things from Linux.
+
+Plus you'll have to add this one thing too.
+--
+======
