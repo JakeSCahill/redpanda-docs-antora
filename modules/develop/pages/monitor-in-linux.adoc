@@ -1,0 +1,7 @@
+= Monitor Redpanda in Linux
+:description: Monitor Redpanda in a Linux environment.
+
+:linux: linux
+
+
+include::partial$monitor-conditionals.adoc[]

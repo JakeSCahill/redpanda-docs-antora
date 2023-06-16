@@ -1,0 +1,5 @@
+== Suggested Links
+
+
+* https://www.youtube.com/watch?v=FEVL8cLUFOc[CEO Alex Gallego keynote]
+* https://redpanda.com/blog/redpanda-vs-kafka-total-cost-ownership-comparison[Redpanda vs Apache Kafka: A Total Cost of Ownership comparison]

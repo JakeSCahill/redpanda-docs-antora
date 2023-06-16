@@ -1,0 +1,17 @@
+= Monitor Redpanda in Kubernetes
+:description: Monitor Redpanda in Kubernetes.
+
+:kubernetes: kubernetes
+
+See also: xref:new-file-for-links.adoc#tab=_tabs_1_kubernetes[k8s tab]
+
+See also: xref:new-file-for-links.adoc#tab=_tabs_1_kubernetes#_testing_tabs[k8s tab]
+
+include::partial$monitor-conditionals.adoc[]
+
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+== Next steps
+
+Learn more details about xref:get-started:architecture.adoc[How Redpanda Works].

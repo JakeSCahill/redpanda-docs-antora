@@ -1,0 +1,31 @@
+Redpanda exports metrics through Prometheus endpoints for you to monitor system health and optimize system performance.
+
+A Redpanda broker exports public metrics from the public-metrics endpoint through the Admin API port (default: 9644).
+
+ifdef::linux[This line is specific to Linux.]
+ifdef::kubernetes[This line is specific to Kubernetes.]
+
+Before v22.2, a Redpanda broker provided metrics only through the internal-metrics endpoint through the Admin API port. While Redpanda still provides this endpoint, it includes many internal metrics that are unnecessary for a typical Redpanda user to monitor. Consequently, the `/public_metrics` endpoint was added to provide a smaller set of important metrics that can be queried and ingested more quickly and inexpensively. The `/metrics` endpoint is now referred to as the `internal metrics` endpoint, and Redpanda recommends that you use it for development, testing, and analysis.
+
+[NOTE]
+====
+To maximize monitoring performance by minimizing the cardinality of data, some metrics are exported when their underlying features are in use, and are not exported when not in use. For example, a metric for consumer groups, `redpanda_kafka_consumer_group_committed_offset`, is not exported when no groups are registered.
+====
+
+ifdef::kubernetes[]
+== Kubernetes-specific Doc 
+
+I love Kubernetes. I love Kubernetes. I love Kubernetes. I love Kubernetes.
+
+I love Kubernetes. I love Kubernetes.
+
+I love Kubernetes. I love Kubernetes. I love Kubernetes. I love Kubernetes.
+endif::kubernetes[]
+
+ifdef::linux[]
+== Linux-specific Doc 
+
+I love Linux. I love Linux. I love Linux. I love Linux. I love Linux. 
+
+I love Linux. I love Linux. I love Linux. I love Linux. 
+endif::linux[]

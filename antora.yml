@@ -8,3 +8,4 @@ asciidoc:
     latest-release-commit: 63fea9a@
 nav:
 - modules/get-started/nav.adoc
+- modules/develop/nav.adoc

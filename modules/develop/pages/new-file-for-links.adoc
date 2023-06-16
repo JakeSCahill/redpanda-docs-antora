@@ -1,0 +1,67 @@
+= New File for Links
+:description: file for testing links.
+
+include::partial$suggested-links.adoc[]
+include::partial$avoid-tune-all-caution.adoc[]
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Quisque efficitur mattis nulla vitae egestas. Maecenas facilisis suscipit vehicula. Nullam rhoncus in velit quis aliquet. Nam fringilla massa vel neque commodo, eget consectetur libero fermentum. Integer non vulputate erat, at bibendum quam. Phasellus turpis arcu, feugiat sit amet bibendum vel, maximus in nulla. In hac habitasse platea dictumst. Suspendisse sed iaculis nulla. In gravida erat sit amet odio placerat, quis egestas tellus tincidunt. Donec tristique nulla vel sem finibus volutpat id a urna.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+Quisque efficitur mattis nulla vitae egestas. Maecenas facilisis suscipit vehicula. Nullam rhoncus in velit quis aliquet. Nam fringilla massa vel neque commodo, eget consectetur libero fermentum. Integer non vulputate erat, at bibendum quam. Phasellus turpis arcu, feugiat sit amet bibendum vel, maximus in nulla. In hac habitasse platea dictumst. Suspendisse sed iaculis nulla. In gravida erat sit amet odio placerat, quis egestas tellus tincidunt. Donec tristique nulla vel sem finibus volutpat id a urna.
+
+## Testing tabs
+
+[tabs]
+======
+Linux::
++
+--
+Linux stuff.
+--
+
+Kubernetes::
++
+--
+Kubernetes stuff.
+--
+======
+
+## Nested tabs
+
+[tabs]
+======
+Tab A::
++
+--
+[tabs]
+====
+Nested Tab A::
++
+Content
++
+More content
+
+Nested Tab B::
++
+Content
+====
+--
+
+Tab B::
++
+--
+Contents of Tab B.
+--
+
+Tab C::
++
+--
+Contents of Tab C.
+
+Contains more than one block.
+--
+======
+
