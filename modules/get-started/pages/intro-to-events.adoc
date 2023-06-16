@@ -2,12 +2,13 @@
 :pp: {plus}{plus}
 :description: Explanation of Redpanda event streaming.
 :page-context-links: [{"name": "Test one", "to": "intro-to-events.adoc" },{"name": "Test two", "to": "architecture.adoc" } ]
+:link-with-anchor: tabs?tab=_tabs_4_lorem#_tabs_#4_lorem
 
-hello
+You can link to other tabs too by using link:tabs?tab=_tabs_1_macos[Section A]
 
-test
+You can link to other tabs too by using link:tabs?tab=_tabs_2_windows[Section B]
 
-glossterm:tatting[the process of making lace by hand]
+Linking to a tab with anchor tag link:{link-with-anchor}[Section B]
 
 Distributed systems often require data and system updates to happen as quickly as possible. In software architecture, these updates can be handled with either messages or events.
 
