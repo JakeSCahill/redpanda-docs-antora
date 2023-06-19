@@ -1,4 +1,4 @@
-name: redpanda
+name: ROOT
 title: Redpanda
 version: 23.1
 start_page: get-started:intro-to-events.adoc
