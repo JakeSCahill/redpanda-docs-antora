@@ -1,2 +1,0 @@
-= Redpanda Documentation
-:page-layout: home

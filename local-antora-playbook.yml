@@ -19,13 +19,16 @@ ui:
   bundle:
     url: https://github.com/JakeSCahill/redpanda-docs-ui/releases/latest/download/ui-bundle.zip
     snapshot: true
+asciidoc:
+  attributes:
+  extensions:
+  - '@asciidoctor/tabs'
+  - 'node_modules/antora-extensions-and-macros/macros/glossary.js'
+  - 'node_modules/antora-extensions-and-macros/macros/config-ref.js'
+  - 'node_modules/antora-extensions-and-macros/macros/helm-ref.js'
 antora:
   extensions:
-  - 'node_modules/antora-extensions-and-macros/extensions/version-fetcher/set-latest-version.js'
-  - require: 'node_modules/antora-extensions-and-macros/extensions/algolia-indexer/index.js'
-    excludes: ['.thumbs','script', '.page-versions','.feedback-section','.banner-container']
   - 'node_modules/antora-extensions-and-macros/extensions/unlisted-pages.js'
-  - 'node_modules/antora-extensions-and-macros/extensions/replace-attributes-in-attachments.js'
   - require: 'node_modules/antora-extensions-and-macros/extensions/add-global-attributes.js'
     org: JakeSCahill
     repo: docs-site
