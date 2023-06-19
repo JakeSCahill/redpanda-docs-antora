@@ -1,0 +1,28 @@
+site:
+  title: Redpanda Docs
+  start_page: ROOT:get-started:intro-to-events.adoc
+content:
+  sources:
+  - url: https://github.com/JakeSCahill/docs-site
+    branches: main
+    start_paths: [site-search, home, api]
+  - url: .
+    branches: HEAD
+ui:
+  bundle:
+    url: https://github.com/JakeSCahill/redpanda-docs-ui/releases/latest/download/ui-bundle.zip
+    snapshot: true
+asciidoc:
+  attributes:
+  extensions:
+  - '@asciidoctor/tabs'
+  - 'node_modules/antora-extensions-and-macros/macros/glossary.js'
+  - 'node_modules/antora-extensions-and-macros/macros/config-ref.js'
+  - 'node_modules/antora-extensions-and-macros/macros/helm-ref.js'
+antora:
+  extensions:
+  - 'node_modules/antora-extensions-and-macros/extensions/unlisted-pages.js'
+  - require: 'node_modules/antora-extensions-and-macros/extensions/add-global-attributes.js'
+    org: JakeSCahill
+    repo: docs-site
+    branch: main
