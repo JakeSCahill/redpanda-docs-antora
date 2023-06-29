@@ -21,7 +21,7 @@ cluster, then you're good to go; this example will show you how to connect to th
 ====
 If you're running Redpanda on your laptop, or in a shared development
 environment, then avoid using Redpanda's optimized production settings. Running
-`sudo rpk redpanda tune all` or manually configuring Redpanda for production
+`sudo rpk redpanda tune all` or manually configuring Redpanda for production ababavavba
 might affect your experience with other applications running on your machine.
 ====
 
