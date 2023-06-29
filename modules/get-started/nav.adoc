@@ -2,3 +2,4 @@
 ** xref:intro-to-events.adoc[]
 ** xref:architecture.adoc[]
 ** xref:code-examples.adoc[]
+** xref:zz-glossary.adoc[]

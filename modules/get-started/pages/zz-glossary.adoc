@@ -1,0 +1,3 @@
+= Redpanda Glossary
+
+glossary::[]
