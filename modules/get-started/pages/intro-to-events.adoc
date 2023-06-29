@@ -3,9 +3,7 @@
 :description: Explanation of Redpanda event streaming.
 :page-context-links: [{"name": "Test one", "to": "intro-to-events.adoc" },{"name": "Test two", "to": "architecture.adoc" } ]
 
-You can use glossterm:rpk[A command-line tool for managing Redpanda] to start a local cluster.
-
-This is a paragraph about glossterm:SAN list[] and TLS certificates.
+This is a paragraph about glossterm:SAN list[] and TLS certificates glossterm:another one[].
 
 Distributed systems often require data and system updates to happen as quickly as possible. In software architecture, these updates can be handled with either messages or events.
 
