@@ -3,7 +3,9 @@
 :description: Explanation of Redpanda event streaming.
 :page-context-links: [{"name": "Test one", "to": "intro-to-events.adoc" },{"name": "Test two", "to": "architecture.adoc" } ]
 
-glossterm:tatting[the process of making lace by hand]
+This is a paragraph about glossterm:test term[].
+
+Also, glossterm:inline term[This description was added inline for development purposes] is important.
 
 Distributed systems often require data and system updates to happen as quickly as possible. In software architecture, these updates can be handled with either messages or events.
 
